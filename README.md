@@ -1,38 +1,33 @@
-# SkillVerifyer - Client
+# SkillVerifyer: Candidate Web
 
-React + Vite + TypeScript frontend for the SkillVerifyer platform.
-
-Contains all three portals (candidate, recruiter, admin) in a single app with role-based routing.
+React + Vite + TypeScript app for candidates (CV upload, assessments, results).
 
 ## Setup
 
+Node 24 and pnpm.
+
 ```bash
-npm install
-npm run dev     # starts on http://localhost:3000
+pnpm i
+cp .env.example .env
+pnpm dev     # http://localhost:3000
 ```
 
 ## Structure
 
 ```
 src/
-├── auth/              # AuthProvider, RoleGuard, LoginPage
-├── components/
-│   ├── ui/            # Shared UI components (buttons, modals, tables)
-│   └── layout/        # AppLayout, Sidebar
-├── features/
-│   ├── candidate/     # CV upload, assessment, interview room
-│   ├── recruiter/     # Dashboard, leaderboard, trust score reports
-│   └── admin/         # User management, settings
-├── hooks/             # Custom React hooks
-├── services/          # API client (axios)
-├── types/             # TypeScript type definitions
-└── utils/             # Helper functions
+├── routes/        page entry points and routing
+├── features/      one folder per area (auth, cv, assessment, results, interview)
+├── shared/
+│   ├── api/       http client
+│   ├── components/
+│   ├── config/
+│   └── lib/       helpers
+├── styles/
+└── main.tsx
 ```
 
-## Key Dependencies
+## Rules
 
-- **React Router v7** — role-based routing
-- **Tailwind CSS** — utility-first styling
-- **Axios** — API client
-- **Recharts** — trust score visualizations
-- **Lucide React** — icons
+- Branches: feat/ fix/ chore/ docs/ + short name. PRs go into `develop`.
+- Conventional commits (feat:, fix:, chore:).
