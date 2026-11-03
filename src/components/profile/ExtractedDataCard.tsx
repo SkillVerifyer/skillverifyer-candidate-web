@@ -34,8 +34,8 @@ export function ExtractedDataCard({
   return (
     <Card className="gap-4">
       <CardHeader className="gap-1">
-        <CardTitle className="text-xs font-semibold">Extracted Data</CardTitle>
-        <CardDescription className="text-[11px]">
+        <CardTitle className="text-small font-semibold">Extracted Data</CardTitle>
+        <CardDescription className="text-profile-caption">
           Review and refine the information found in your CV.
         </CardDescription>
       </CardHeader>
@@ -52,7 +52,7 @@ export function ExtractedDataCard({
                 variant="secondary"
                 className={
                   skill.verified
-                    ? "bg-blue-100 text-blue-700 hover:bg-blue-100"
+                    ? "bg-profile-verified-bg text-profile-verified-text hover:bg-profile-verified-bg"
                     : "bg-muted text-muted-foreground"
                 }
               >
@@ -74,13 +74,13 @@ export function ExtractedDataCard({
                   }
                 }}
                 placeholder="Skill name"
-                className="h-6 w-28 text-xs"
+                className="h-6 w-28 text-small"
               />
             ) : (
               <Button
                 variant="outline"
                 size="sm"
-                className="h-6 rounded-full border-dashed px-2.5 text-xs"
+                className="h-6 rounded-full border-dashed px-2.5 text-small"
                 onClick={() => setAdding(true)}
               >
                 <Plus className="size-3" />
@@ -100,17 +100,17 @@ export function ExtractedDataCard({
           {education.map((item) => (
             <div
               key={`${item.degree}-${item.period}`}
-              className="flex items-center gap-3 rounded-md bg-blue-50 p-3"
+              className="flex items-center gap-3 rounded-md bg-profile-info-bg p-3"
             >
               <div className="flex size-9 shrink-0 items-center justify-center rounded-md bg-background text-muted-foreground">
                 <GraduationCap className="size-4" />
               </div>
               <div className="leading-tight">
-                <p className="text-xs font-semibold">{item.degree}</p>
-                <p className="text-[11px] text-muted-foreground">
+                <p className="text-small font-semibold">{item.degree}</p>
+                <p className="text-profile-caption text-muted-foreground">
                   {item.institution}
                 </p>
-                <p className="text-[11px] text-muted-foreground/70">
+                <p className="text-profile-caption text-muted-foreground/70">
                   {item.period}
                 </p>
               </div>
@@ -134,19 +134,19 @@ export function ExtractedDataCard({
                 <span
                   className={
                     item.current
-                      ? "absolute left-[-4.5px] top-1 size-2 rounded-full bg-blue-500 ring-4 ring-blue-100"
+                      ? "absolute left-[-4.5px] top-1 size-2 rounded-full bg-primary-500 ring-4 ring-primary-100"
                       : "absolute left-[-4.5px] top-1 size-2 rounded-full bg-muted-foreground/50"
                   }
                 />
                 <div className="leading-tight">
-                  <p className="text-xs font-semibold">{item.title}</p>
+                  <p className="text-small font-semibold">{item.title}</p>
                   {item.company && (
-                    <p className="text-[11px] text-muted-foreground">
+                    <p className="text-profile-caption text-muted-foreground">
                       {item.company}
                     </p>
                   )}
                 </div>
-                <p className="shrink-0 text-[11px] text-muted-foreground">
+                <p className="shrink-0 text-profile-caption text-muted-foreground">
                   {item.period}
                 </p>
               </li>
@@ -169,7 +169,7 @@ function SectionTitle({
 }) {
   return (
     <div className="flex items-center justify-between">
-      <h3 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+      <h3 className="flex items-center gap-2 text-profile-caption font-semibold uppercase tracking-wide text-muted-foreground">
         <Icon className="size-3.5" />
         {children}
       </h3>
@@ -177,7 +177,7 @@ function SectionTitle({
         <Button
           variant="ghost"
           size="sm"
-          className="h-6 px-1.5 text-[11px] text-muted-foreground"
+          className="h-6 px-1.5 text-profile-caption text-muted-foreground"
           onClick={onEdit}
         >
           Edit

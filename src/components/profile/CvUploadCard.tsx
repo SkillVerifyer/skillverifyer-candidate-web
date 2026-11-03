@@ -35,17 +35,17 @@ export function CvUploadCard({ initialFileName, onUpload }: CvUploadCardProps) {
 
   return (
     <Card className="p-4">
-      <div className="flex flex-col items-center gap-2 rounded-md border border-dashed border-blue-400 px-6 py-8 text-center">
+      <div className="flex flex-col items-center gap-2 rounded-md border border-dashed border-profile-info-border px-6 py-8 text-center">
         {uploaded ? (
-          <FileCheck2 className="size-12 text-green-600" strokeWidth={1.5} />
+          <FileCheck2 className="size-12 text-profile-success" strokeWidth={1.5} />
         ) : (
           <FileUp className="size-12 text-muted-foreground" strokeWidth={1.5} />
         )}
 
-        <h3 className="mt-1 text-sm font-semibold">
+        <h3 className="mt-1 text-medium font-semibold">
           {uploaded ? "Your CV is uploaded" : "Upload your CV"}
         </h3>
-        <p className="max-w-sm text-xs text-muted-foreground">
+        <p className="max-w-sm text-small text-muted-foreground">
           {uploaded ? (
             <>
               <span className="font-semibold text-foreground">{fileName}</span>{" "}
@@ -58,7 +58,7 @@ export function CvUploadCard({ initialFileName, onUpload }: CvUploadCardProps) {
 
         <Button
           size="sm"
-          className="mt-2 rounded-full bg-green-600 px-5 hover:bg-green-700"
+          className="mt-2 rounded-full bg-profile-success px-5 hover:bg-profile-success-hover"
           onClick={() => inputRef.current?.click()}
         >
           {uploaded ? "Choose another file" : "Choose file"}
@@ -71,11 +71,11 @@ export function CvUploadCard({ initialFileName, onUpload }: CvUploadCardProps) {
           onChange={handleChange}
         />
 
-        <p className="text-xs text-muted-foreground">
+        <p className="text-profile-caption text-muted-foreground">
           PDF, maximum {MAX_SIZE_MB} MB
         </p>
         {error && (
-          <p role="alert" className="text-xs font-medium text-destructive">
+          <p role="alert" className="text-profile-caption font-medium text-destructive">
             {error}
           </p>
         )}

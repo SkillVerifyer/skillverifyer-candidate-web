@@ -103,6 +103,24 @@
   --color-security-bg: #eff6ff; /* light blue */
   --color-security-border: #bfdbfe; /* light blue */
 
+  /* =========================================
+     Profile
+     ========================================= */
+  --color-profile-banner-start: #3b82f6;
+  --color-profile-banner-middle: #818cf8;
+  --color-profile-banner-end: #c084fc;
+  --color-profile-avatar: #0a1b4d;
+  --color-profile-info-bg: #eff6ff;
+  --color-profile-info-text: #1d4ed8;
+  --color-profile-info-hover: #dbeafe;
+  --color-profile-info-border: #60a5fa;
+  --color-profile-verified-bg: #dbeafe;
+  --color-profile-verified-text: #1d4ed8;
+  --color-profile-success: #16a34a;
+  --color-profile-success-hover: #15803d;
+  --color-profile-brand-github: #000000;
+  --color-profile-brand-freelancer-bg: #f0f9ff;
+  --color-profile-brand-freelancer: #0ea5e9;
 
   /* text size */
   --text-small: 0.75rem; /* 12px */
@@ -110,6 +128,9 @@
   --text-large: 1.125rem; /* 18px */
   --text-extra-large: 1.25rem; /* 20px */
   --text-title: 1.5rem; /* 24px */
+  --text-profile-heading: 1rem; /* 16px */
+  --text-profile-caption: 0.6875rem; /* 11px */
+  --text-profile-micro: 0.625rem; /* 10px */
 }
 
 @theme inline {

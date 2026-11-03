@@ -44,11 +44,11 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
           <div className="size-5 rounded-sm bg-muted-foreground/40" />
-          <span className="text-xs font-semibold">{job.company}</span>
+          <span className="text-small font-semibold">{job.company}</span>
         </div>
         <Button
           size="sm"
-          className="h-7 bg-blue-500 px-6 text-xs hover:bg-blue-600"
+          className="h-7 bg-btn-primary px-6 text-small hover:bg-btn-primary-hover"
           disabled={isApplied || pending}
           onClick={handleApply}
         >
@@ -56,7 +56,7 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
         </Button>
       </div>
 
-      <h3 className="mt-3 text-xs font-semibold">{job.title}</h3>
+      <h3 className="mt-3 text-small font-semibold">{job.title}</h3>
 
       <div className="mt-2 flex flex-wrap gap-2">
         <Meta icon={MapPin}>{job.location}</Meta>
@@ -67,11 +67,11 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
         </Meta>
       </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">{job.summary}</p>
+      <p className="mt-3 text-small text-muted-foreground">{job.summary}</p>
 
       {hasDetails && (
         <>
-          <CollapsibleContent className="mt-3 space-y-3 border-t pt-3 text-xs">
+          <CollapsibleContent className="mt-3 space-y-3 border-t pt-3 text-small">
             {job.responsibilities && job.responsibilities.length > 0 && (
               <DetailList title="Responsibilities" items={job.responsibilities} />
             )}
@@ -80,7 +80,7 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
             )}
           </CollapsibleContent>
 
-          <CollapsibleTrigger className="mt-2 flex items-center gap-1 text-[11px] text-muted-foreground hover:text-foreground">
+          <CollapsibleTrigger className="mt-2 flex items-center gap-1 text-small text-muted-foreground hover:text-foreground">
             {open ? "Hide full role" : "View full role"}
             <ChevronDown
               className={`size-3 transition-transform ${open ? "rotate-180" : ""}`}
@@ -102,7 +102,7 @@ function Meta({
   return (
     <Badge
       variant="outline"
-      className="gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-normal"
+      className="gap-1.5 rounded-md px-2 py-0.5 text-small font-normal"
     >
       <Icon className="size-3 text-muted-foreground" />
       {children}
@@ -114,7 +114,7 @@ function DetailList({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
       <p className="mb-1 font-semibold">{title}</p>
-      <ul className="list-disc space-y-1 pl-4 text-muted-foreground">
+      <ul className="list-disc space-y-1 pl-4 text-muted-foreground text-small">
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
