@@ -21,7 +21,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 
 const navItems = [
   { title: "My Profile", href: "/profile", icon: User },
-  { title: "Job Board", href: "/jobs", icon: Briefcase },
+  { title: "Job Board", href: "/job-board", icon: Briefcase },
   { title: "Assessment", href: "/assessment", icon: FileText },
   { title: "Setting", href: "/settings", icon: Settings },
 ]
@@ -54,7 +54,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
                     isActive={pathname.startsWith(item.href)}
-                    className="h-10 data-[active=true]:bg-blue-100 data-[active=true]:font-medium data-[active=true]:text-blue-600"
+                    className="h-10 data-active:bg-primary-100! data-active:font-medium data-active:text-primary-700!"
                     onClick={() => navigate(item.href)}
                   >
                     <item.icon />

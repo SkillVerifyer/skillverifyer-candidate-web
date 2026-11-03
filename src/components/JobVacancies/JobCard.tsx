@@ -1,36 +1,36 @@
-import { useState } from "react"
-import { Banknote, ChevronDown, Clock, MapPin } from "lucide-react"
+import { useState } from "react";
+import { Banknote, ChevronDown, Clock, MapPin } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { JobCardProps } from "@/types/jobs"
+} from "@/components/ui/collapsible";
+import { JobCardProps } from "@/types/jobs";
 
 const money = new Intl.NumberFormat("en-US", {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
-})
+});
 
 export function JobCard({ job, applied = false, onApply }: JobCardProps) {
-  const [open, setOpen] = useState(false)
-  const [isApplied, setIsApplied] = useState(applied)
-  const [pending, setPending] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [isApplied, setIsApplied] = useState(applied);
+  const [pending, setPending] = useState(false);
 
   const hasDetails = Boolean(
     job.responsibilities?.length || job.requirements?.length,
-  )
+  );
 
   async function handleApply() {
-    setPending(true)
+    setPending(true);
     try {
-      await onApply?.(job.id)
-      setIsApplied(true)
+      await onApply?.(job.id);
+      setIsApplied(true);
     } finally {
-      setPending(false)
+      setPending(false);
     }
   }
 
@@ -48,7 +48,7 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
         </div>
         <Button
           size="sm"
-          className="h-7 bg-btn-primary px-6 text-small hover:bg-btn-primary-hover"
+          className="h-7 bg-btn-primary px-6 text-small hover:bg-btn-primary-hover text-white"
           disabled={isApplied || pending}
           onClick={handleApply}
         >
@@ -73,7 +73,10 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
         <>
           <CollapsibleContent className="mt-3 space-y-3 border-t pt-3 text-small">
             {job.responsibilities && job.responsibilities.length > 0 && (
-              <DetailList title="Responsibilities" items={job.responsibilities} />
+              <DetailList
+                title="Responsibilities"
+                items={job.responsibilities}
+              />
             )}
             {job.requirements && job.requirements.length > 0 && (
               <DetailList title="Requirements" items={job.requirements} />
@@ -89,15 +92,15 @@ export function JobCard({ job, applied = false, onApply }: JobCardProps) {
         </>
       )}
     </Collapsible>
-  )
+  );
 }
 
 function Meta({
   icon: Icon,
   children,
 }: {
-  icon: React.ComponentType<{ className?: string }>
-  children: React.ReactNode
+  icon: React.ComponentType<{ className?: string }>;
+  children: React.ReactNode;
 }) {
   return (
     <Badge
@@ -107,7 +110,7 @@ function Meta({
       <Icon className="size-3 text-muted-foreground" />
       {children}
     </Badge>
-  )
+  );
 }
 
 function DetailList({ title, items }: { title: string; items: string[] }) {
@@ -120,5 +123,5 @@ function DetailList({ title, items }: { title: string; items: string[] }) {
         ))}
       </ul>
     </div>
-  )
+  );
 }

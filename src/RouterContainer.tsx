@@ -6,6 +6,7 @@ import AuthLayout from "./layouts/AuthLayout";
 const Login = lazy(() => import("./pages/auth/login"));
 const Register = lazy(() => import("./pages/auth/register"));
 const Profile = lazy(() => import("./pages/profile"));
+const JobBoard = lazy(() => import("./pages/jobBoard"));
 
 export default function RouterContainer() {
   return (
@@ -18,6 +19,7 @@ export default function RouterContainer() {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to="/profile" replace />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/job-board" element={<JobBoard />} />
         </Route>
       </Routes>
     </BrowserRouter>

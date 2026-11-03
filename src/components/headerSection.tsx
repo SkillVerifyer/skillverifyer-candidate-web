@@ -1,5 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 export default function HeaderSection() {
-  const pathName = window.location.pathname.replace("/", "");
+  const { pathname } = useLocation();
+  const pathName = pathname.replace("/", "");
   return (
     <div className="p-3 bg-header bg-white justify-between flex items-center border-b border-gray-300">
       <div className="flex items-center gap-1">
