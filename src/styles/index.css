@@ -39,68 +39,48 @@
   /* =========================================
      Typography
      ========================================= */
-  /* Main titles (Ex: "Find your next role", "Let's build your profile") */
-  --color-main-title: #0f172a;
-  /* sub titles (Ex: "Roles ranked by how closely...", "Tell us a little about yourself") */
-  --color-subtitle: #475569;
-  /* Body text */
-  --color-body: #334155;
-  /* Button text (white color) */
-  --color-inverse: #ffffff;
-  /* Links View full role, Sign Up */
-  --color-link: #3b82f6;
-  /* active text */
-  --color-active-text: #16a34a;
-  /* inactive text */
-  --color-inactive-text: #2563eb;
+  --color-main-title: #0f172a; /* Main titles */
+  --color-subtitle: #475569; /* sub titles */
+  --color-body: #334155; /* Body text */
+  --color-inverse: #ffffff; /* Button text (white color) */
+  --color-link: #3b82f6; /* Links View full role, Sign Up */
+  --color-active-text: #16a34a; /* active text */
+  --color-inactive-text: #2563eb; /* inactive text */
+  --color-verified-skill-text: #0051E8; /* verified skill text */
+  --text-color-primary: #000000; /* black */
+  --text-color-secondary: #B9B9B9; /* gray */
 
   /* =========================================
      Backgrounds
      ========================================= */
-  /* Whole app background (gray/white color) */
-  --color-app: #f8fafc;
-  /* Cards and white color boxes (Ex: Job Card, Login Box) */
-  --color-card: #ffffff;
-  /* Sidebar color */
-  --color-sidebar: #ffffff;
-  /* Input fields inside color */
-  --color-input: #ffffff;
-  /* Coding Assessment (IDE) background - dark blue/black */
-  --color-editor: #1e293b;
+  --color-app: #fafafa; /* Whole app background (gray/white color) */
+  --color-card: #ffffff; /* Cards and white color boxes (Ex: Job Card, Login Box) */
+  --color-sidebar: #ffffff; /* Sidebar color */
+  --color-input: #ffffff; /* Input fields inside color */
+  --color-editor: #1e293b; /* Coding Assessment (IDE) background - dark blue/black */
 
   /* =========================================
      Borders
      ========================================= */
-  /* Cards and Input normal borders */
-  --color-default: #e2e8f0;
-  /* Focus - Input border */
-  --color-focus: #3b82f6;
-  /* active border for buttons */
-  --color-active-border: #bfdbfe;
+  --color-default: #e2e8f0; /* Cards and Input normal borders */
+  --color-focus: #3b82f6; /* Focus - Input border */
+  --color-active-border: #bfdbfe; /* active border for buttons */
 
   /* =========================================
      Buttons
      ========================================= */
-  /* Main buttons (Example: Apply, Sign In, Create my profile) */
-  --color-btn-primary: #3b82f6;
-  /* Main buttons after Hover */
-  --color-btn-primary-hover: #2563eb;
-  /* Disabled buttons */
-  --color-btn-disabled: #94a3b8;
-  /* Active buttons */
-  --color-btn-active: #ffffff;
-  /* Inactive buttons */
-  --color-btn-inactive: #eff6ff;
-  /* deactive button border */
-  --color-btn-inactive-border: #cbd5e1;
+  --color-btn-primary: #3b82f6; /* Main buttons (Example: Apply, Sign In, Create my profile) */
+  --color-btn-primary-hover: #2563eb; /* Main buttons after Hover */
+  --color-btn-disabled: #94a3b8; /* Disabled buttons */
+  --color-btn-active: #ffffff; /* Active buttons */
+  --color-btn-inactive: #eff6ff; /* Inactive buttons */
+  --color-btn-inactive-border: #cbd5e1; /* deactive button border */
 
   /* =========================================
      Status & Alerts
      ========================================= */
-  /* UI 'Active' (green color) */
-  --color-status-active: #16a34a;
-  /* 'Deactivated' (red/gray color) */
-  --color-status-deactivated: #dc2626;
+  --color-status-active: #16a34a; /* UI 'Active' (green color) */
+  --color-status-deactivated: #dc2626; /* 'Deactivated' (red/gray color) */
 
   /* "Attention required" (Phone Detected) */
   --color-alert-warning-bg: #fef9c3; /* light yellow */
@@ -122,6 +102,14 @@
   --color-security-sub-text: #3b82f6; /* light blue */
   --color-security-bg: #eff6ff; /* light blue */
   --color-security-border: #bfdbfe; /* light blue */
+
+
+  /* text size */
+  --text-small: 0.75rem; /* 12px */
+  --text-medium: 0.875rem; /* 14px */
+  --text-large: 1.125rem; /* 18px */
+  --text-extra-large: 1.25rem; /* 20px */
+  --text-title: 1.5rem; /* 24px */
 }
 
 @theme inline {

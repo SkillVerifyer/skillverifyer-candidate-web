@@ -67,7 +67,7 @@ export const Step2CVUpload = ({ onNext, onBack }: Step2CVUploadProps) => {
 
       <div
         className={`w-full mt-4 rounded-xl border-2 border-dashed p-10 flex flex-col items-center text-center transition-all duration-300 ${
-          cv ? "border-green-400 bg-green-50/20" : "border-blue-300 bg-[#f8fafc]"
+          cv ? "border-green-400 bg-green-50/20" : "border-blue-300 bg-surface-muted"
         }`}
       >
         <input
