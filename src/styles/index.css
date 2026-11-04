@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-primary-50: #eff6ff;
@@ -15,4 +20,239 @@
   --color-trust-low: #ef4444;
   --color-trust-medium: #f59e0b;
   --color-trust-high: #22c55e;
+
+   /* Trust Score bands */
+  --color-trust-low: #dc2626;
+  --color-trust-medium: #d97706;
+  --color-trust-high: #16a34a;
+
+  /* Integrity flag awaiting recruiter review */
+  --color-signal-pending: #7c3aed;
+
+  /* Surfaces & text (light) */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+
+  /* =========================================
+     Typography
+     ========================================= */
+  --color-main-title: #0f172a; /* Main titles */
+  --color-subtitle: #475569; /* sub titles */
+  --color-body: #334155; /* Body text */
+  --color-inverse: #ffffff; /* Button text (white color) */
+  --color-link: #3b82f6; /* Links View full role, Sign Up */
+  --color-active-text: #16a34a; /* active text */
+  --color-inactive-text: #2563eb; /* inactive text */
+  --color-verified-skill-text: #0051E8; /* verified skill text */
+  --text-color-primary: #000000; /* black */
+  --text-color-secondary: #B9B9B9; /* gray */
+
+  /* =========================================
+     Backgrounds
+     ========================================= */
+  --color-app: #fafafa; /* Whole app background (gray/white color) */
+  --color-card: #ffffff; /* Cards and white color boxes (Ex: Job Card, Login Box) */
+  --color-sidebar: #ffffff; /* Sidebar color */
+  --color-input: #ffffff; /* Input fields inside color */
+  --color-editor: #1e293b; /* Coding Assessment (IDE) background - dark blue/black */
+
+  /* =========================================
+     Borders
+     ========================================= */
+  --color-default: #e2e8f0; /* Cards and Input normal borders */
+  --color-focus: #3b82f6; /* Focus - Input border */
+  --color-active-border: #bfdbfe; /* active border for buttons */
+
+  /* =========================================
+     Buttons
+     ========================================= */
+  --color-btn-primary: #3b82f6; /* Main buttons (Example: Apply, Sign In, Create my profile) */
+  --color-btn-primary-hover: #2563eb; /* Main buttons after Hover */
+  --color-btn-disabled: #94a3b8; /* Disabled buttons */
+  --color-btn-active: #ffffff; /* Active buttons */
+  --color-btn-inactive: #eff6ff; /* Inactive buttons */
+  --color-btn-inactive-border: #cbd5e1; /* deactive button border */
+
+  /* =========================================
+     Status & Alerts
+     ========================================= */
+  --color-status-active: #16a34a; /* UI 'Active' (green color) */
+  --color-status-deactivated: #dc2626; /* 'Deactivated' (red/gray color) */
+
+  /* "Attention required" (Phone Detected) */
+  --color-alert-warning-bg: #fef9c3; /* light yellow */
+  --color-alert-warning-text: #a16207; /* dark yellow */
+  --color-alert-warning-border: #f5e7b2; /* light yellow */
+
+  /* =========================================
+     Trust Score & Integrity Flags
+     ========================================= */
+  --color-trust-excellent: #16a34a;
+  --color-trust-good: #d97706;
+  --color-trust-low: #dc2626;
+  --color-signal-pending: #7c3aed;
+
+  /* =========================================
+     Security notice
+     ========================================= */
+  --color-security-main-text: #1e40af; /* dark blue */
+  --color-security-sub-text: #3b82f6; /* light blue */
+  --color-security-bg: #eff6ff; /* light blue */
+  --color-security-border: #bfdbfe; /* light blue */
+
+  /* =========================================
+     Profile
+     ========================================= */
+  --color-profile-banner-start: #3b82f6;
+  --color-profile-banner-middle: #818cf8;
+  --color-profile-banner-end: #c084fc;
+  --color-profile-avatar: #0a1b4d;
+  --color-profile-info-bg: #eff6ff;
+  --color-profile-info-text: #1d4ed8;
+  --color-profile-info-hover: #dbeafe;
+  --color-profile-info-border: #60a5fa;
+  --color-profile-verified-bg: #dbeafe;
+  --color-profile-verified-text: #1d4ed8;
+  --color-profile-success: #16a34a;
+  --color-profile-success-hover: #15803d;
+  --color-profile-brand-github: #000000;
+  --color-profile-brand-freelancer-bg: #f0f9ff;
+  --color-profile-brand-freelancer: #0ea5e9;
+
+  /* text size */
+  --text-small: 0.75rem; /* 12px */
+  --text-medium: 0.875rem; /* 14px */
+  --text-large: 1.125rem; /* 18px */
+  --text-extra-large: 1.25rem; /* 20px */
+  --text-title: 1.5rem; /* 24px */
+  --text-profile-heading: 1rem; /* 16px */
+  --text-profile-caption: 0.6875rem; /* 11px */
+  --text-profile-micro: 0.625rem; /* 10px */
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Geist Variable', sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
 }
